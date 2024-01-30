@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .loader {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 8px solid #d4af37; 
+      border-top: 8px solid #2c3e50; 
+      animation: spin 1.5s linear infinite, fadeInOut 3s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      background: url('lamborgihni/lambo/lambo/Lamborghini_Logo.svg.pngS') no-repeat center/contain;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="loader">
+    <div class="logo"></div>
+  </div>
+
+  <script>
+    // Simulate a delay (3 seconds in this example), then redirect to the next page
+    setTimeout(function() {
+      window.location.href = 'nextpage.html'; // Replace 'nextpage.html' with the actual name of your next page
+    }, 3000); // Adjust the duration as needed
+  </script>
+</body>
+</html>
